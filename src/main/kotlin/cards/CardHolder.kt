@@ -52,6 +52,9 @@ abstract class CardHolder {
         return false
     }
 
+    /**
+     * Moves [count] of [Card]s to the recipient. Returns if operation was successful
+     */
     fun moveCards(recipient: CardHolder, count: Int = 1): Boolean{
         if(cards.size < count) return false
         for(i in 1..count) recipient.cards.add(cards.removeFirst())
