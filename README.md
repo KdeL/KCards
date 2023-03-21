@@ -1,9 +1,7 @@
 # KCards
-Kotlin Library providing an Implementation of  **Playing Cards**
-Could be used to jump-start **a card game** or anything that uses playing cards.
+Kotlin Library providing an Implementation of  **Playing Cards**. Could be used to jump-start **a card game** or anything that uses playing cards.
 
 ## Usage
-Simply extend the *CardHolder* abstract class to create any entity that holds cards (decks, players,table, discarded piles etc.)
 
 To create a **Deck of cards** instantiate of the *Deck* class provided. 
 
@@ -36,6 +34,9 @@ You can build a deck with only a subset of suites like this
         .addSuite(Suite.CLUBS)
         .build()
 
+### Creating Players
+Simply extend the *CardHolder* abstract class to create any entity that holds cards (players, table, discarded piles etc.)
+Card games 
 
 ## Concepts 
 
