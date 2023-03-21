@@ -1,4 +1,4 @@
-package cards
+package kcards
 
 class Player: CardHolder() {
 }

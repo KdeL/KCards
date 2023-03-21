@@ -1,4 +1,4 @@
-package cards
+package kcards
 
 /**
  * [CardHolder] to be extended by all entities holding [Card]s. Examples can be a deck of cards or a player.
@@ -12,19 +12,19 @@ abstract class CardHolder {
     private val cards = ArrayList<Card>()
 
     /**
-     * adds the [card] to the [cards] pile. Return value indicates if the operation was successful.
-     * The [card] is appended to the end of [cards] pile.
+     * adds the [card] to the [kcards] pile. Return value indicates if the operation was successful.
+     * The [card] is appended to the end of [kcards] pile.
      */
     protected infix fun addCard(card: Card): Boolean = cards.add(card)
 
     /**
-     * Removes the [card] from the [cards] pile. Return value indicates if the operation was successful.
+     * Removes the [card] from the [kcards] pile. Return value indicates if the operation was successful.
      */
     protected infix fun removeCard(card: Card): Boolean = cards.remove(card)
 
     /**
-     * Removes the given [Card] from [cards] and adds it to the given [recipient].
-     * If there are multiple cards matching the criteria ( [suite] andn [rank] ),only  the first one found in [cards] is moved.
+     * Removes the given [Card] from [kcards] and adds it to the given [recipient].
+     * If there are multiple cards matching the criteria ( [suite] andn [rank] ),only  the first one found in [kcards] is moved.
      * Return value indicates if the operation was successful.
      * New objects are not instantiated during this operation.
      */
@@ -38,15 +38,15 @@ abstract class CardHolder {
     }
 
     /**
-     * Removes the given [Card] from [cards] and adds it to the given [recipient].
-     * If there are multiple cards matching the [card], only the first one found in [cards] is moved.
+     * Removes the given [Card] from [kcards] and adds it to the given [recipient].
+     * If there are multiple cards matching the [card], only the first one found in [kcards] is moved.
      * Return value indicates if the operation was successful.
      * New objects are not instantiated during this operation.
      */
     fun moveCard(card: Card, recipient: CardHolder): Boolean {
-        cards.firstOrNull { it === card }?.let { card ->
-            cards.remove(card)
-            recipient.cards.add(card)
+        cards.firstOrNull { it === card }?.let { it ->
+            cards.remove(it)
+            recipient.cards.add(it)
             return true
         }
         return false
@@ -62,14 +62,14 @@ abstract class CardHolder {
     }
 
     /**
-     * Moves all from [cards] to the [recipient]. New objects are not instantiated during this operation.
+     * Moves all from [kcards] to the [recipient]. New objects are not instantiated during this operation.
      */
     fun moveAllCards(recipient: CardHolder) {
         while(cards.isNotEmpty()) { recipient.cards.add(cards.removeFirst()) }
     }
 
     /**
-     * Suffles the list of [Card]s currently held in [cards]
+     * Suffles the list of [Card]s currently held in [kcards]
      */
     fun shuffle() = cards.shuffle()
 
@@ -79,12 +79,12 @@ abstract class CardHolder {
     fun sort() = cards.sortWith(compareBy( Card::suite, Card::rank))
 
     /**
-     * Returns a complete list of [Card]s in [cards] as an immutable list
+     * Returns a complete list of [Card]s in [kcards] as an immutable list
      */
     fun listOfCards(): List<Card> { return cards }
 
     /**
-     * Returns a [String] showing the [cards] pile in the current order
+     * Returns a [String] showing the [kcards] pile in the current order
      */
     fun printCards(): String { return cards.joinToString{ it -> it.display } }
 }

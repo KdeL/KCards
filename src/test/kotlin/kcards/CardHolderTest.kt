@@ -1,4 +1,4 @@
-package cards
+package kcards
 
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

@@ -1,4 +1,4 @@
-package cards
+package kcards
 
 /**
  * Represents all suits in playing cards

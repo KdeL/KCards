@@ -1,4 +1,4 @@
-package cards
+package kcards
 
 /**
  * Represents a playing card. Holds a [Rank] and a [Suite] that can't be changed after creation.
