@@ -97,6 +97,6 @@ internal class DeckTest {
         val deck = Deck.Builder().addRank(Rank.KING).build()
         deck.deal(user, 15)
         assert(user.listOfCards().size == 4)
-        assert(deck.listOfCards().size == 0)
+        assert(deck.listOfCards().isEmpty())
     }
 }
