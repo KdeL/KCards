@@ -1,5 +1,6 @@
 # KCards
-Kotlin Library to model a Playing Cards.
+Kotlin Library providing an Implementation of  **Playing Cards**
+Could be used to jump-start **a card game** or anything that uses playing cards.
 
 ## Usage
 Simply extend the *CardHolder* abstract class to create any entity that holds cards (decks, players,table, discarded piles etc.)
@@ -48,6 +49,6 @@ Can be ACE, ONE ... TEN, JACK, QUEEN OR KING
 Has a Suite and a Rank. Can not be changed after creation (immutable)
 
 ### CardHolder (abstract class)  
-Any entity that holds cards (decks, players etc.) can be created by extending **CardHolder** abstract class.
-CardHolder provides storage for holding cards and functions to manipulate them (add, remove, shuffle, exchange with other **CardHoder**s). 
+Any entity that holds cards (decks, players etc.) can be created by extending *CardHolder* abstract class.
+CardHolder provides storage for holding cards and functions to manipulate them (add, remove, shuffle, exchange with other *CardHoder*s). 
 
