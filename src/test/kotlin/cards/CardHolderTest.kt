@@ -47,7 +47,8 @@ internal class CardHolderTest {
     }
 
     @Test
-    fun moveAllCards() {
+    fun `shuffle with`() {
+
     }
 
     @Test

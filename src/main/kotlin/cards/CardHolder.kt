@@ -74,6 +74,11 @@ abstract class CardHolder {
     fun shuffle() = cards.shuffle()
 
     /**
+     * Sorts the list of [Card]s by [Suite] and [Rank]
+     */
+    fun sort() = cards.sortWith(compareBy( Card::suite, Card::rank))
+
+    /**
      * Returns a complete list of [Card]s in [cards] as an immutable list
      */
     fun listOfCards(): List<Card> { return cards }
