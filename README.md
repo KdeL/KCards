@@ -7,33 +7,34 @@ To create a **Deck of cards** instantiate of the *Deck* class provided.
 
 ### Creating a standard deck
 A standard deck of playing cards has 52 cards. Creating one is easy:
-
-    val deck = Deck.Builder().addCompleteDeck().build()
+```kotlin
+val deck = Deck.Builder().addCompleteDeck().build()
+```
 ### Creating a deck with multiple standard decks
 Some games need more than one deck. Just add any number of standard decks just like this:
-
-    val deck = Deck.Builder()
-        .addCompleteDeck()
-        .addCompleteDeck()
-        .build()
-
+```kotlin
+val deck = Deck.Builder()
+            .addCompleteDeck()
+            .addCompleteDeck()
+            .build()
+```
 ### Custom decks
 Some games are not using all cards of a standard deck.
 Deck with a subset of ranks can be created like this:
-
-    val deck = Deck.Builder()
-        .addRank(Rank.TWO)
-        .addRank(Rank.ACE)
-        .addRank(Rank.KING)
-        .build()
-
+```kotlin
+val deck = Deck.Builder()
+            .addRank(Rank.TWO)
+            .addRank(Rank.ACE)
+            .addRank(Rank.KING)
+            .build()
+```
 You can build a deck with only a subset of suites like this
-
-    var deck = Deck.Builder()
-        .addSuite(Suite.SPADES)
-        .addSuite(Suite.CLUBS)
-        .build()
-
+```kotlin
+var deck = Deck.Builder()
+            .addSuite(Suite.SPADES)
+            .addSuite(Suite.CLUBS)
+            .build()
+```
 ### Creating Players
 Simply extend the *CardHolder* abstract class to create any entity that holds cards (players, table, discarded piles etc.)
 Card games 
