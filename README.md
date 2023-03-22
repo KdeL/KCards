@@ -5,12 +5,12 @@ Kotlin Library providing an Implementation of  Playing Cards. Could be used to j
 
 To create a *deck of cards*, instantiate of the `Deck` class provided. 
 
-### Creating a standard deck
+### Standard deck
 A standard deck of playing cards has 52 cards. Creating one is easy:
 ```kotlin
 val deck = Deck.Builder().addCompleteDeck().build()
 ```
-### Creating a deck with multiple standard decks
+### Multiple decks
 Some games need more than one deck. Just add any number of standard decks just like this:
 ```kotlin
 val deck = Deck.Builder()
@@ -50,7 +50,7 @@ Can be `ACE`, `ONE` ... `TEN`, `JACK`, `QUEEN` OR `KING`
 ### Card
 Has a `Suite` and a `Rank`. Can not be changed after creation (immutable)
 
-### CardHolder (abstract class)  
+### CardHolder 
 Any entity that holds cards (decks, players etc.) can be created by extending `CardHolder` abstract class.
 `CardHolder` provides storage for holding cards and functions to manipulate them (add, remove, shuffle, exchange with other `CardHoder`s). 
 
